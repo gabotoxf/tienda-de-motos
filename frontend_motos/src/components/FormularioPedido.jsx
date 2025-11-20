@@ -13,7 +13,7 @@ export default function FormularioPedido() {
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const enviar = async () => {
-    await axios.post("http://localhost:8000/api/pedidos", form);
+    await axios.post("http://localhost:8000/realizar-pedido", form);
     alert("Pedido enviado correctamente");
   };
 

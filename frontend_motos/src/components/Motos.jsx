@@ -13,13 +13,13 @@ export default function Motos() {
   return (
     <div className="min-vh-100 text-dark py-5 px-4">
       <h1 className="display-4 fw-bold mb-5">
-        <span className="me-2">🏍️</span> Motos Disponibles
+        Motos Disponibles
       </h1>
 
       <div className="row g-4">
         {motos.map((moto) => (
           <div key={moto.id} className="col-12 col-md-6 col-lg-4">
-            <div className="card bg-secondary border-0 shadow-lg h-100 rounded-4 overflow-hidden moto-card">
+            <div className="card bg-secondary border-0 shadow-lg h-100 rounded-2 overflow-hidden moto-card">
               <div className="bg-black d-flex justify-content-center align-items-center p-3" style={{ height: "200px" }}>
                 <img
                   src={moto.imagen}
@@ -54,7 +54,8 @@ export default function Motos() {
       <style>
         {`
           .btn-gradient {
-            background: linear-gradient(45deg, #6f42c1, #d63384);
+            background-image: linear-gradient(to right, #01060d, #292b2e, #4d4e50, #747476, #9d9d9d);
+  color: #fff;
             border: none;
             color: white;
             transition: 0.3s ease;
@@ -65,13 +66,12 @@ export default function Motos() {
             opacity: .85;
           }
 
-          .moto-card {
+          .img-fluid {
             transition: transform .3s ease, box-shadow .3s ease;
           }
 
-          .moto-card:hover {
+          .moto-card:hover .img-fluid{
             transform: scale(1.04);
-            box-shadow: 0 10px 30px rgba(255, 0, 120, 0.2);
           }
         `}
       </style>

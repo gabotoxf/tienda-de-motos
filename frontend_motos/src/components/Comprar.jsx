@@ -13,7 +13,7 @@ export default function Comprar() {
   const handleSubmit = e => {
     e.preventDefault();
 
-    fetch("http://localhost:8000/api/pedidos", {
+    fetch("http://localhost:8000/realizar-pedido", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
